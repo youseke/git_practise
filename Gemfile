@@ -1,4 +1,3 @@
-#
 GIT
   remote: git@github.com:ricoh/acapulco_juarez.git
   revision: b2b5f0a3d0e0463cda5b800623bbe2b38000ef37
