@@ -1,27 +1,4 @@
 GIT
-  remote: git@github.com:ricoh/acapulco_juarez.git
-  revision: b2b5f0a3d0e0463cda5b800623bbe2b38000ef37
-  tag: 1.1.0
-  specs:
-    juarez (1.1.0)
-      activemodel (= 3.2.12)
-      activerecord (= 3.2.12)
-      activesupport (= 3.2.12)
-      amq-client (= 1.0.2)
-      amq-protocol (= 1.5.0)
-      amqp (= 1.0.2)
-      arel (= 3.0.2)
-      builder (= 3.0.4)
-      bunny (= 0.8.0)
-      eventmachine (= 1.0.3)
-      i18n (= 0.6.1)
-      multi_json (= 1.5.0)
-      mysql2 (= 0.3.11)
-      nsp-validation (= 0.0.4)
-      rails3_acts_as_paranoid (= 0.2.4)
-      tzinfo (= 0.3.35)
-
-GIT
   remote: git@github.com:ricoh/devmode.git
   revision: e8755caab61f47aa118b93ad52d33ded3c7fd68a
   tag: 0.0.8
@@ -35,6 +12,27 @@ GIT
   tag: 0.0.4
   specs:
     nsp-validation (0.0.4)
+
+PATH
+  remote: ../acapulco_juarez
+  specs:
+    juarez (1.0.0)
+      activemodel (= 3.2.12)
+      activerecord (= 3.2.12)
+      activesupport (= 3.2.12)
+      amq-client (= 0.9.2)
+      amq-protocol (= 0.9.0)
+      amqp (= 0.9.4)
+      arel (= 3.0.2)
+      builder (= 3.0.4)
+      bunny (= 0.7.9)
+      eventmachine (= 1.0.0.beta3)
+      i18n (= 0.6.1)
+      multi_json (= 1.5.0)
+      mysql2 (= 0.3.11)
+      nsp-validation (= 0.0.4)
+      rails3_acts_as_paranoid (= 0.2.4)
+      tzinfo (= 0.3.35)
 
 GEM
   remote: http://rubygems.org/
@@ -63,17 +61,17 @@ GEM
     activesupport (3.2.12)
       i18n (~> 0.6)
       multi_json (~> 1.0)
-    amq-client (1.0.2)
-      amq-protocol (>= 1.2.0)
+    amq-client (0.9.2)
+      amq-protocol (>= 0.9.0)
       eventmachine
-    amq-protocol (1.5.0)
-    amqp (1.0.2)
-      amq-client (~> 1.0.2)
-      amq-protocol (>= 1.3.0)
+    amq-protocol (0.9.0)
+    amqp (0.9.4)
+      amq-client (~> 0.9.2)
+      amq-protocol (>= 0.9.0)
       eventmachine
     arel (3.0.2)
     builder (3.0.4)
-    bunny (0.8.0)
+    bunny (0.7.9)
     capybara (1.1.2)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -81,32 +79,34 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
-    childprocess (0.3.9)
+    childprocess (0.3.8)
       ffi (~> 1.0, >= 1.0.11)
     daemons (1.1.9)
     database_cleaner (0.7.1)
     diff-lcs (1.1.3)
     erubis (2.7.0)
-    eventmachine (1.0.3)
-    eventmachine (1.0.3-x86-mingw32)
-    ffi (1.8.1)
-    ffi (1.8.1-x86-mingw32)
-    hike (1.2.3)
+    eventmachine (1.0.0.beta.3)
+    eventmachine (1.0.0.beta.3-x86-mingw32)
+    ffi (1.4.0)
+    ffi (1.4.0-x86-mingw32)
+    hike (1.2.2)
     httpclient (2.2.4)
     i18n (0.6.1)
-    ir_b (1.5.0)
+    ir_b (1.4.0)
     journey (1.0.4)
     json (1.6.8)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.23)
+    mail-iso-2022-jp (2.0.2)
+      mail (>= 2.2.6, <= 2.5.4)
+    mime-types (1.22)
     multi_json (1.5.0)
     mysql2 (0.3.11)
     mysql2 (0.3.11-x86-mingw32)
-    nokogiri (1.5.9)
-    nokogiri (1.5.9-x86-mingw32)
+    nokogiri (1.5.6)
+    nokogiri (1.5.6-x86-mingw32)
     polyglot (0.3.3)
     prefetch-rspec (0.1.5)
       rspec (> 2.0.0)
@@ -130,7 +130,7 @@ GEM
       diff-lcs (~> 1.1.3)
     rspec-mocks (2.10.1)
     rubyzip (0.9.9)
-    selenium-webdriver (2.33.0)
+    selenium-webdriver (2.29.0)
       childprocess (>= 0.2.5)
       multi_json (~> 1.0)
       rubyzip
@@ -149,15 +149,15 @@ GEM
     standalone_migrations (1.0.5)
       activerecord (>= 3)
       rake
-    tapp (1.4.0)
+    tapp (1.3.0)
       thor
     thin (1.3.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
-    thor (0.18.1)
-    tilt (1.4.1)
-    treetop (1.4.14)
+    thor (0.17.0)
+    tilt (1.3.7)
+    treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.35)
@@ -184,21 +184,22 @@ DEPENDENCIES
   activemodel (= 3.2.12)
   activerecord (= 3.2.12)
   activesupport (= 3.2.12)
-  amq-client (= 1.0.2)
-  amq-protocol (= 1.5.0)
-  amqp (= 1.0.2)
+  amq-client (= 0.9.2)
+  amq-protocol (= 0.9.0)
+  amqp (= 0.9.4)
   arel (= 3.0.2)
   builder (= 3.0.4)
-  bunny (= 0.8.0)
+  bunny (= 0.7.9)
   capybara (= 1.1.2)
   database_cleaner (= 0.7.1)
   devmode!
-  eventmachine (= 1.0.3)
+  eventmachine (= 1.0.0.beta3)
   httpclient (= 2.2.4)
   i18n (= 0.6.1)
   ir_b
   json (= 1.6.8)
   juarez!
+  mail-iso-2022-jp
   multi_json (= 1.5.0)
   mysql2 (= 0.3.11)
   nsp-validation!
